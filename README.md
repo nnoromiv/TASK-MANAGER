@@ -14,6 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run server`
+
+Runs the local database
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -68,3 +72,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Firebase Initialiazation
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC9PnuIphguGnw0qaVLBGbIEq4PBYW5ZYg",
+    authDomain: "redtech-interview.firebaseapp.com",
+    databaseURL: "https://redtech-interview-default-rtdb.firebaseio.com",
+    projectId: "redtech-interview",
+    storageBucket: "redtech-interview.appspot.com",
+    messagingSenderId: "922126535207",
+    appId: "1:922126535207:web:d98ab51fcec3275bb09c02",
+    measurementId: "G-B81EWPJSSB"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
